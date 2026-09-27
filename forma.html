@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angel studio — Замовити сайт</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">Angel <span>studio</span></div>
+        <nav class="nav-links">
+            <a href="index.html">Головна</a>
+            <a href="skills.html">Навички</a>
+            <a href="portfolio.html">Портфоліо</a>
+            <a href="profile.html">Про мене</a>
+            <a href="forma.html" class="active btn-highlight">Замовити</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2 class="section-title">Прайс-лист та <span>Замовлення</span></h2>
+
+        <form id="my-form" action="https://formspree.io/f/xoevkgla" method="POST" class="order-form">
+            
+            <div class="services-selection">
+                <h3>Оберіть необхідні послуги:</h3>
+                
+                <label class="service-item">
+                    <input type="checkbox" name="services[]" value="Розробка коду (200 грн)" data-price="200" id="srv1">
+                    <div class="service-info">
+                        <strong>1. Розробка коду для сайту — <span>200 грн</span></strong>
+                        <p>Написання чистого та робочого коду під твої завдання.</p>
+                    </div>
+                </label>
+
+                <label class="service-item">
+                    <input type="checkbox" name="services[]" value="Публікація сайту (100 грн)" data-price="100" id="srv2">
+                    <div class="service-info">
+                        <strong>2. Публікація сайту в інтернет — <span>100 грн</span></strong>
+                        <p>Допоможу налаштувати та вивантажити сайт у мережу (хостинг та домен оплачуються окремо).</p>
+                    </div>
+                </label>
+
+                <label class="service-item">
+                    <input type="checkbox" name="services[]" value="Доробка / зміна сайту (100 грн)" data-price="100" id="srv3">
+                    <div class="service-info">
+                        <strong>3. Доробка / зміна існуючого сайту — <span>100 грн</span></strong>
+                        <p>Внесення правок, зміна тексту, елементів або структури.</p>
+                    </div>
+                </label>
+            </div>
+
+            <div class="total-price-box">
+                Загальна вартість: <span id="total-price">0</span> грн
+                <input type="hidden" name="total_price" id="total-price-input" value="0 грн">
+            </div>
+
+            <div class="form-inputs">
+                <div class="input-group">
+                    <label for="name">Ваше ім'я *</label>
+                    <input type="text" id="name" name="name" placeholder="Як до вас звертатися?" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Ваш Email *</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="contact">Telegram / Discord / Телефон *</label>
+                    <input type="text" id="contact" name="contact" placeholder="@username або номер" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="details">Опис завдання / Деталі замовлення</label>
+                    <textarea id="details" name="details" rows="4" placeholder="Опишіть, який саме сайт вам потрібен..."></textarea>
+                </div>
+            </div>
+
+            <button type="submit" id="submit-btn" class="btn primary-btn submit-btn">Надіслати замовлення</button>
+            <p id="form-status" style="margin-top: 15px; text-align: center; font-weight: bold;"></p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Angel studio. Усі права захищено.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
